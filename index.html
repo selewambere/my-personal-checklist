@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Checklist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>My Checklist</h1>
+            <p>Organize your tasks. Achieve your goals.</p>
+        </header>
+
+        <!-- Authentication -->
+        <section id="authSection" class="auth-box">
+
+            <h2>Welcome</h2>
+            <p class="subtitle">Login or create your account</p>
+
+            <form id="loginForm">
+                <h3>Login</h3>
+
+                <input type="email" id="loginEmail"
+                    placeholder="Email address" required>
+
+                <input type="password" id="loginPassword"
+                    placeholder="Password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <div class="separator">OR</div>
+
+            <form id="registerForm">
+                <h3>Create Account</h3>
+
+                <input type="email" id="registerEmail"
+                    placeholder="Email address" required>
+
+                <input type="password" id="registerPassword"
+                    placeholder="Create password (at least 6 characters)"
+                    minlength="6" required>
+
+                <button type="submit" class="register-btn">
+                    Register
+                </button>
+                <button type="button" id="resendEmailBtn">
+    Resend Confirmation Email
+</button>
+            </form>
+
+            <p id="authMessage" class="message"></p>
+
+        </section>
+
+        <!-- Checklist Dashboard -->
+        <section id="dashboard" hidden>
+
+            <div class="user-bar">
+                <div>
+                    <span>Logged in as:</span>
+                    <strong id="userEmail"></strong>
+                </div>
+
+                <button id="logoutBtn" class="logout-btn">
+                    Logout
+                </button>
+            </div>
+
+            <div class="welcome">
+                <h2>My Daily Tasks</h2>
+                <p>Make every day productive!</p>
+            </div>
+
+            <!-- Add Task -->
+            <form id="taskForm" class="input-area">
+                <input type="text" id="taskInput"
+                    placeholder="Enter a new task..." required>
+
+                <button type="submit">+ Add Task</button>
+            </form>
+
+            <!-- Progress -->
+            <div class="progress-area">
+
+                <div class="progress-info">
+                    <span>My Progress</span>
+                    <strong id="percentage">0%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+
+                <p id="taskCount">0 tasks completed</p>
+
+            </div>
+
+            <!-- Tasks -->
+            <div class="task-heading">
+                <h3>My Tasks</h3>
+                <button id="clearCompleted" class="clear-btn">
+                    Clear Completed
+                </button>
+            </div>
+
+            <ul id="taskList"></ul>
+
+            <p id="taskMessage" class="message"></p>
+
+        </section>
+
+        <footer>
+            <p>My Checklist &copy; 2026 | Stay Focused</p>
+        </footer>
+
+    </div>
+
+    <!-- Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

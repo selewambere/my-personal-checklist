@@ -1,0 +1,284 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    min-height: 100vh;
+    padding: 35px 15px;
+    color: #1e293b;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #1d4ed8;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p,
+.subtitle {
+    color: #64748b;
+}
+
+.auth-box {
+    max-width: 420px;
+    margin: auto;
+}
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.auth-box .subtitle {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form h3 {
+    margin-bottom: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+input:focus {
+    border-color: #2563eb;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.88;
+}
+
+#loginForm button,
+.register-btn {
+    width: 100%;
+}
+
+.register-btn {
+    background: #16a34a;
+}
+
+.separator {
+    text-align: center;
+    color: #94a3b8;
+    margin: 22px 0;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.user-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: #eff6ff;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+#userEmail {
+    display: block;
+    overflow-wrap: anywhere;
+    margin-top: 5px;
+}
+
+.logout-btn {
+    background: #dc2626;
+}
+
+.welcome {
+    margin-bottom: 20px;
+}
+
+.welcome h2 {
+    color: #1e3a8a;
+    margin-bottom: 6px;
+}
+
+.welcome p {
+    color: #64748b;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+.input-area input {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.input-area button {
+    white-space: nowrap;
+}
+
+.progress-area {
+    margin: 28px 0;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+}
+
+#percentage {
+    color: #16a34a;
+}
+
+.progress-bar {
+    height: 11px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: #16a34a;
+    transition: width 0.3s;
+}
+
+#taskCount {
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.task-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.clear-btn {
+    background: #475569;
+    font-size: 12px;
+    padding: 9px 12px;
+}
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 5px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#taskList li span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+#taskList li input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+#taskList li.completed span {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.delete-btn {
+    background: #dc2626;
+    padding: 8px 11px;
+}
+
+.empty {
+    text-align: center;
+    color: #94a3b8;
+    padding: 25px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media(max-width: 500px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    .input-area button {
+        width: 100%;
+    }
+
+    .user-bar {
+        align-items: flex-start;
+    }
+
+    .task-heading {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #taskList li {
+        gap: 8px;
+    }
+}
