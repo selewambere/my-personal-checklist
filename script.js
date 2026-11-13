@@ -2,7 +2,8 @@
 // ======================================
 // 1. SUPABASE CONNECTION
 // ======================================
-
+const APP_URL =
+    "https://selewambere.github.io/my-personal-checklist/";
 const SUPABASE_URL = "https://fksqbjxekxztjxgznfjy.supabase.co";
 
 const SUPABASE_KEY = "sb_publishable_LWpcW87Og7bMWWhFCI51pg_x75g_ltS";
@@ -109,7 +110,7 @@ registerForm.addEventListener("submit", async function(e) {
             password: password,
 
             options: {
-                emailRedirectTo: window.location.origin
+               emailRedirectTo: APP_URL
             }
 
         });
@@ -220,7 +221,7 @@ if (resendEmailBtn) {
                 email: email,
 
                 options: {
-                    emailRedirectTo: window.location.origin
+                   emailRedirectTo: APP_URL
                 }
 
             });
