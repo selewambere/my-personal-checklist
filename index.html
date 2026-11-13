@@ -82,8 +82,26 @@
                 <input type="text" id="taskInput"
                     placeholder="Enter a new task..." required>
 
+                <label class="date-field">
+                    <span>Due date (optional)</span>
+                    <input type="date" id="dueDate">
+                </label>
+
+                <label class="date-field">
+                    <span>Reminder date &amp; time (optional)</span>
+                    <input type="datetime-local" id="reminderAt">
+                </label>
+
                 <button type="submit">+ Add Task</button>
             </form>
+
+            <div class="notification-area">
+                <p>Get a browser notification when a reminder is due. Keep this website open for reminders to be checked.</p>
+                <button type="button" id="enableNotifications" class="notification-btn">
+                    Enable Notifications
+                </button>
+                <span id="notificationStatus" role="status"></span>
+            </div>
 
             <!-- Progress -->
             <div class="progress-area">
